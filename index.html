@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .circles {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            mix-blend-mode: exclusion;
+            opacity: 0.8;
+        }
+
+        .yellow {
+            background-image: linear-gradient(to right, #fce658 15%, #fce973 85%);
+            height: 600px;
+            width: 600px;
+            left: -6%;
+            top: 10%;
+            animation: transform 10s linear infinite both alternate, movement 10s linear infinite both;
+        }
+
+        .orange {
+            background-image: linear-gradient(to right, #ff756e 15%, #fe8b85 85%);
+            height: 600px;
+            width: 600px;
+            left: 15%;
+            top: 50%;
+            animation: transform 15s linear infinite both alternate, movement 7s linear infinite both;
+        }
+
+        .pink {
+            background-image: linear-gradient(to right, #f26afc 15%, #f6a6fc 85%);
+            height: 850px;
+            width: 850px;
+            left: 10%;
+            top: -30%;
+            animation: transform 13s linear infinite both alternate, movement 13s linear infinite both;
+        }
+
+        .cyan {
+            height: 1000px;
+            width: 1000px;
+            left: 50%;
+            top: 0%;
+            background-image: linear-gradient(to right, #70eafa 15%, #2ae2fa 85%);
+            animation: transform 11s linear infinite both alternate, movement 15s linear infinite both;
+        }
+
+
+        @keyframes transform {
+            0% {
+                border-radius: 37% 63% 51% 49% / 37% 35% 35% 63%;
+            }
+
+            20% {
+                border-radius: 37% 63% 51% 49% / 37% 35% 35% 63%;
+            }
+
+            40% {
+                border-radius: 36% 64% 64% 36% / 64% 48% 52% 26%;
+            }
+
+            60% {
+                border-radius: 37% 63% 51% 49% / 30% 30% 70% 73%;
+            }
+
+            80% {
+                border-radius: 40% 60% 42% 58% / 51% 51% 49% 59%;
+            }
+
+            100% {
+                border-radius: 33% 67% 70% 30% / 30% 40% 70% 70%;
+            }
+        }
+
+        @keyframes movement {
+
+            0%,
+            100% {
+                transform: none;
+            }
+
+            50% {
+                transform: translate(50%, 20%) rotateY(10deg) scale(1.25);
+            }
+        }
+
+
+
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: black;
+            display: flex;
+            margin: 0;
+        }
+
+        .bg {
+            background-image: url(https://twam.ru/wp-content/uploads/2024/02/zernistaia-tekstura-shum-1.webp);
+            width: 100vw;
+            height: 100vh;
+            background-blend-mode: revert;
+            opacity: 0.1;
+            z-index: 2;
+            filter: brightness(30) blur(1px) invert(1);
+            background-size: auto;
+            overflow: hidden;
+        }
+
+
+
+
+        .typewriter h1 {
+            color: #ffffff;
+            font-family: monospace;
+            overflow: hidden;
+            border-right: 0.05em solid rgba(255, 255, 255, 0.76);
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: 0.1em;
+            animation: typing 6.5s steps(30, end) infinite, blink-caret .5s step-end infinite;
+            font-size: 10em;
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0
+            }
+
+            50% {
+                width: 100%
+            }
+
+            100% {
+                width: 100%
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: rgb(255, 255, 255)
+            }
+        }
+
+        .typewriter {
+            position: absolute;
+            top: 38%;
+            left: 24%;
+            color: transparent;
+            background-color: transparent;
+            text-shadow: -1px -1px 8px #ffffff40, 1px -1px 8px #ffffff40, -1px 1px 8px #ffffff40, 1px 1px 8px #ffffff40;
+        }
+
+
+
+
+        @media screen and (max-width: 768px) {
+
+            .yellow {
+                left: -10%;
+                top: 40%;
+                height: 600px;
+                width: 600px;
+            }
+
+            .orange {
+                height: 350px;
+                width: 350px;
+                left: -17%;
+                top: 10%;
+            }
+
+            .pink {
+                height: 450px;
+                width: 450px;
+            }
+
+            .cyan {
+                height: 300px;
+                width: 300px;
+                top: 20%;
+                left: 60%;
+            }
+
+
+        }
+
+        @media screen and (max-width: 480px) {
+            .yellow {
+                height: 300px;
+                width: 300px;
+                top: 60%;
+                left: -20%;
+            }
+
+            .orange {
+                height: 200px;
+                width: 200px;
+                left: -40%;
+                top: 30%;
+            }
+
+            .pink {
+                height: 370px;
+                width: 370px;
+                left: -20%;
+                top: -30%;
+            }
+
+            .cyan {
+                height: 200px;
+                width: 200px;
+                left: 30%;
+            }
+
+            .typewriter h1 {
+                font-size: 7vw;
+            }
+
+            .typewriter {
+                width: 13em;
+                overflow: hidden;
+                height: 2em;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circles yellow"></div>
+    <div class="circles orange"></div>
+    <div class="circles pink"></div>
+    <div class="circles cyan"></div>
+    <div class="typewriter">
+        <h1>2 BE DIGITAL</h1>
+    </div>
+    <div class="bg"></div>
+
+</body>
+
+</html>
