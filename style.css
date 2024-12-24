@@ -288,6 +288,7 @@
     height: 100vh;
     background: black;
     font-size: 12px;
+    overflow: hidden;
 }
 
 .snow {
