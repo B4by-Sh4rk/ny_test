@@ -439,22 +439,33 @@
     opacity: 0;
     transition: opacity 1.5s ease, all 2s ease-in-out;
     transform: translate(0%, 0%);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .main_text {
+    height: 100vh;
+    width: 99vw;
+    overflow: hidden;
     z-index: 100;
     position: absolute;
-    bottom: -50%;
-    left: 17%;
+    display: flex;
+    top: 0;
+    left: 0;
     color: white;
     text-align: center;
     font-family: 'Unbounded';
     font-weight: 100;
     transition: all 2s ease;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0;
 }
 
 .main_text_visible {
-    transform: translate(0%, -440%);
+    transform: translate(0%, -47%);
+    opacity: 1;
 }
 
 .glitchWrapper_visible {
