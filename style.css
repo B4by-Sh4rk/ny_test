@@ -14,6 +14,7 @@
     top: 0%;
     left: -0%;
     transition: all 2s ease;
+    overflow: hidden;
 }
 
 .glitch {
@@ -289,6 +290,9 @@
     background: black;
     font-size: 12px;
     overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .snow {
@@ -370,15 +374,19 @@
     text-shadow: -1px -1px 8px #ffffff40, 1px -1px 8px #ffffff40, -1px 1px 8px #ffffff40, 1px 1px 8px #ffffff40;
     font-size: 0.2em;
 }
-
+.wrapper_1,
+.wrapper_2,
+.wrapper_3,
+.wrapper_4,
+.wrapper_5 {
+    position: absolute;
+}
 .wrapper_1 {
     transform: translate(-20%, -36%);
-
 }
 
 .wrapper_2 {
     transform: translate(20%, -26%);
-
 }
 
 .wrapper_3 {
@@ -446,7 +454,7 @@
 }
 
 .main_text {
-    height: 100vh;
+    height: 99vh;
     width: 99vw;
     overflow: hidden;
     z-index: 100;
