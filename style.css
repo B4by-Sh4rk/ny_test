@@ -374,6 +374,7 @@
     text-shadow: -1px -1px 8px #ffffff40, 1px -1px 8px #ffffff40, -1px 1px 8px #ffffff40, 1px 1px 8px #ffffff40;
     font-size: 0.2em;
 }
+
 .wrapper_1,
 .wrapper_2,
 .wrapper_3,
@@ -381,6 +382,7 @@
 .wrapper_5 {
     position: absolute;
 }
+
 .wrapper_1 {
     transform: translate(-20%, -36%);
 }
@@ -429,16 +431,18 @@
     -webkit-mask-size: 219px auto;
     -webkit-mask-repeat: no-repeat;
     mask-position: 50%;
-    animation: gradientAnim 6s infinite alternate;
+    animation: gradientAnim 1s infinite alternate;
+    background-size: 10px;
+    background-position: center 50em;
 }
 
 @keyframes gradientAnim {
     0% {
-        background-position: 50% 0%;
+        background-position: center 0em;
     }
 
     100% {
-        background-position: 50% 100%;
+        background-position: center 100em;
     }
 }
 
