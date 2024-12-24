@@ -47,7 +47,7 @@ function animateAddText() {
     if (logoWrapper) {
         setTimeout(() => {
             logoWrapper.classList.add('glitchWrapper_visible');
-        }, 1000);
+        }, 200);
     }
 }
 
