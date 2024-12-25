@@ -3,8 +3,17 @@ function getParameters() {
     let paramString = urlString.split('?')[1];
     let clearString = urlString.split('?')[0];
     let queryString = new URLSearchParams(paramString);
+    const wrappers2 = document.querySelectorAll('.wrappers');
+
+    wrappers2.forEach(wrapper => {
+        wrapper.style.display = 'none';
+    });
 
     for (let pair of queryString.entries()) {
+        wrappers2.forEach(wrapper => {
+            wrapper.style.display = 'flex';
+        });
+    
         function removeTypewriterClass() {
             const typewriterElements = document.querySelectorAll('.typewriter');
 
