@@ -638,12 +638,15 @@ div#all_wrapp {
     }
 
     .two {
-        margin-right: 36vw;
+        bottom: -0.5vh;
+        margin-left: -10vw;
     }
-
+    .five {
+        bottom: -0.5vh;
+    }
     .star {
         left: 86%;
-        top: 71%;
+        top: 84vh;
         opacity: 0.8;
     }
 
